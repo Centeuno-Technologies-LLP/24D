@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>24 Dimensions</title>
+
+    <link rel="stylesheet" href="../src/styles/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER (Loaded via JS) -->
+    <div id="header"></div>
+
+    <!-- HERO CAROUSEL -->
+    <section id="hero" class="hero-carousel">
+
+        <div class="hero-slide active"
+            style="background-image: url('https://sobharealty.com/sites/default/files/styles/webp/public/2025-11/Home%20Page%20Banner%20%201920x1080%20%E2%80%93%201-%20Mirage.jpg.webp?itok=O15EGfQb')">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Discover Your Dream Property</h1>
+                <p>Luxury residences crafted with precision.</p>
+                <button class="primary-btn">Explore Properties</button>
+            </div>
+        </div>
+
+        <div class="hero-slide"
+            style="background-image: url('https://sobharealty.com/sites/default/files/styles/webp/public/2025-10/Desktop%20crest_0.png.webp?itok=8dR3O_lH')">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Architecture That Inspires</h1>
+                <p>Where elegance meets innovation.</p>
+                <button class="primary-btn">View Projects</button>
+            </div>
+        </div>
+
+        <div class="hero-slide"
+            style="background-image: url('https://sobharealty.com/sites/default/files/styles/webp/public/2025-12/Home%20Page%20Banner%20%201920x1080%20%E2%80%93%204.jpg.webp?itok=xNhTYU8g')">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Crafted for Timeless Living</h1>
+                <p>Homes designed for generations.</p>
+                <button class="primary-btn">Contact Us</button>
+            </div>
+        </div>
+
+        <!-- Dots -->
+        <div class="hero-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+        </div>
+
+    </section>
+
+
+    <main>
+
+        <!-- HIGHLIGHTS SECTION -->
+        <section class="highlights">
+            <div class="container">
+
+                <!-- Heading -->
+                <div class="highlights-heading">
+                    <h2>
+                        Experience the height of sophistication in our curated collection of
+                        prestigious homes worldwide
+                    </h2>
+                </div>
+
+                <!-- Content Grid -->
+                <div class="highlights-grid">
+
+                    <!-- Left Image -->
+                    <div class="highlight-image">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Luxury Villa">
+                    </div>
+
+                    <!-- Center Stats -->
+                    <div class="highlight-stats">
+                        <div class="stat-card">
+                            <h3>15<span>+</span></h3>
+                            <p>Projects</p>
+                        </div>
+
+                        <div class="stat-card">
+                            <h3>3000<span>+</span></h3>
+                            <p>Customers</p>
+                        </div>
+
+                        <div class="stat-card">
+                            <h3>20<span>+</span></h3>
+                            <p>Years of Legacy</p>
+                        </div>
+                    </div>
+
+                    <!-- Right Image -->
+                    <div class="highlight-image">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Luxury Residence">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <div class="hr-divider"></div>
+
+        <!-- HOME ABOUT SECTION -->
+        <section class="home-about">
+            <div class="container">
+
+                <div class="home-about-header">
+                    <h2>Developing the future in key locations</h2>
+                    <p class="subtitle">
+                        24 Dimensions is a Pune-based real estate mandate and project marketing firm
+                    </p>
+                </div>
+
+                <div class="home-about-cards">
+
+                    <div class="about-card fade-up">
+                        <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471" alt="Urban Excellence">
+                        <div class="about-card-overlay">
+                            <h3>Urban Excellence</h3>
+                            <p>Premium developments in iconic city locations</p>
+                        </div>
+                    </div>
+
+                    <div class="about-card fade-up">
+                        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e" alt="Strategic Growth">
+                        <div class="about-card-overlay">
+                            <h3>Strategic Growth</h3>
+                            <p>Projects positioned for long-term value appreciation</p>
+                        </div>
+                    </div>
+
+                    <div class="about-card fade-up">
+                        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" alt="Thoughtful Living">
+                        <div class="about-card-overlay">
+                            <h3>Thoughtful Living</h3>
+                            <p>Homes designed for comfort, function, and elegance</p>
+                        </div>
+                    </div>
+
+                    <div class="about-card fade-up">
+                        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                            alt="Connected Locations">
+                        <div class="about-card-overlay">
+                            <h3>Connected Locations</h3>
+                            <p>Developments anchored in accessibility and lifestyle</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <h3>
+                    We specialise in Pune’s key micro-markets, working with developers, landowners
+                    and serious buyers to turn good projects into fully sold developments.
+                </h3><br><br>
+
+                <div class="home-about-cta">
+                    <a href="about.html" class="primary-btn">About 24 Dimensions</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- WHAT WE DO SECTION -->
+        <section class="what-we-do">
+            <div class="container">
+
+                <p class="section-subtitle">Who We Work With</p>
+                <h2 class="section-title">FOR DEVELOPERS & LANDOWNERS</h2>
+
+                <div class="what-slider-wrapper">
+                    <button class="slider-btn prev">&#10094;</button>
+
+                    <div class="what-slider">
+                        <div class="what-card">
+                            <h3>Developer Mandates</h3>
+                            <p>
+                                Strategic real estate mandates designed to maximise visibility,
+                                demand and long-term value.
+                            </p>
+                            <i class="fa-solid fa-city card-icon"></i>
+                        </div>
+
+                        <div class="what-card">
+                            <h3>Project Marketing</h3>
+                            <p>
+                                End-to-end marketing solutions crafted for premium residential
+                                and mixed-use developments.
+                            </p>
+                            <i class="fa-solid fa-bullhorn card-icon"></i>
+                        </div>
+
+                        <div class="what-card">
+                            <h3>Market Research</h3>
+                            <p>
+                                Deep market intelligence helping developers take confident,
+                                data-backed decisions.
+                            </p>
+                            <i class="fa-solid fa-chart-line card-icon"></i>
+                        </div>
+
+                        <div class="what-card">
+                            <h3>Sales Strategy</h3>
+                            <p>
+                                Conversion-focused sales frameworks aligned with buyer behaviour
+                                and market trends.
+                            </p>
+                            <i class="fa-solid fa-handshake card-icon"></i>
+                        </div>
+
+                    </div>
+
+                    <button class="slider-btn next">&#10095;</button>
+                </div>
+
+                <div class="what-cta">
+                    <a href="projects.html" class="primary-btn">
+                        See Our Developer Mandate Services
+                    </a>
+                </div>
+            </div><br><br><br><br>
+
+           <div class="container">
+  <h2 class="section-title">FOR HOMEBUYERS & INVESTORS</h2>
+
+  <!-- Removed slider wrapper & buttons -->
+  <div class="what-slider">
+    
+    <div class="what-card">
+      <h3>Developer Mandates</h3>
+      <p>
+        Strategic real estate mandates designed to maximise visibility,
+        demand and long-term value.
+      </p>
+      <i class="fa-solid fa-city card-icon"></i>
+    </div>
+
+    <div class="what-card">
+      <h3>Project Marketing</h3>
+      <p>
+        End-to-end marketing solutions crafted for premium residential
+        and mixed-use developments.
+      </p>
+      <i class="fa-solid fa-bullhorn card-icon"></i>
+    </div>
+
+    <div class="what-card">
+      <h3>Market Research</h3>
+      <p>
+        Deep market intelligence helping developers take confident,
+        data-backed decisions.
+      </p>
+      <i class="fa-solid fa-chart-line card-icon"></i>
+    </div>
+
+  </div>
+
+  <div class="what-cta">
+    <a href="projects.html" class="primary-btn">
+      Explore 24D Exclusive Homes
+    </a>
+  </div>
+</div>
+
+        </section>
+
+        <!-- OUR PROCESS -->
+        <section class="our-process">
+            <div class="container">
+                <h2 class="section-title">Let’s See How it Works</h2>
+
+                <!-- PROCESS GRID -->
+                <div class="process-grid process-scroll">
+
+                    <!-- STEP 1 -->
+                    <div class="process-card process-step process-image-card" data-step="2">
+                        <span class="step-number">Phase 1</span>
+                        <h3>Planning</h3>
+                        <p>
+                            We translate ideas into actionable designs that balance creativity
+                            with practicality.
+                        </p>
+                        <ul class="process-list">
+                            <li>Complete Review</li>
+                            <li>Deep Research</li>
+                            <li>Structured Plan</li>
+                        </ul>
+                    </div>
+
+
+                    <!-- STEP 2 -->
+                    <div class="process-card process-step" data-step="2">
+                        <span class="step-number">Phase 2</span>
+                        <h3>Promote</h3>
+                        <p>
+                            We translate ideas into actionable designs that balance creativity
+                            with practicality.
+                        </p>
+
+                        <ul class="process-list">
+                            <li>Strategy</li>
+                            <li>Positioning</li>
+                            <li>Integrated Marketing</li>
+                        </ul>
+                    </div>
+
+                    <!-- STEP 3 -->
+                    <div class="process-card process-step" data-step="3">
+                        <span class="step-number">Phase 3</span>
+                        <h3>Convert & Close</h3>
+                        <p>
+                            From groundbreaking to final handover, our team manages every
+                            stage with precision and transparency.
+                        </p>
+
+                        <ul class="process-list">
+                            <li> Structured Follow-ups</li>
+                            <li>Complete Documentation</li>
+                            <li>Society Handover</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- HOME PROJECTS SECTION -->
+        <section class="home-projects">
+            <div class="container">
+                <h2 class="section-title"> A quick look at some projects we’ve been associated with</h2>
+            </div>
+
+            <!-- CAROUSEL -->
+            <div class="home-projects-carousel">
+                <div class="carousel-track">
+
+                    <!-- SLIDE 1 -->
+                    <div class="project-slide active">
+                        <img src="https://sobharealty.com/sites/default/files/styles/webp/public/2025-11/Homepage%20New%20Launch%20Banner%20desk-the%20horizon_1.jpg.webp?itok=PzVfg_kE"
+                            alt="Project One">
+
+                        <div class="project-info">
+                            <div class="project-left">
+                                <!-- <img src="../src/assets/logo.png" class="project-logo" alt=""> -->
+                                <h3>Synergy: Salisbury Park – 4.5 BHK Residences</h3>
+                            </div>
+
+                            <div class="project-highlights">
+
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <div>
+                                        <span class="highlight-label">Location</span>
+                                        <p>Salisbury Park</p>
+                                    </div>
+                                </div>
+
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-ruler-combined"></i>
+                                    <div>
+                                        <span class="highlight-label">Area</span>
+                                        <p>3000 Sq.Ft.</p>
+                                    </div>
+                                </div>
+
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                                    <div>
+                                        <span class="highlight-label">Price</span>
+                                        <p>₹7.30 – ₹7.80 Cr</p>
+                                    </div>
+                                </div>
+
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-building"></i>
+                                    <div>
+                                        <span class="highlight-label">Property Status</span>
+                                        <p>Ready Possession</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 2 -->
+                    <div class="project-slide active">
+                        <img src="https://sobharealty.com/sites/default/files/styles/webp/public/2025-11/Homepage-New-Launch-Banner-Desk-%281%29-yachtside.jpg.webp?itok=yIK0BY3W"
+                            alt="Project One">
+
+                        <div class="project-info">
+                            <div class="project-left">
+                                <!-- <img src="../src/assets/logo.png" class="project-logo" alt=""> -->
+                                <h3>Project Aloha – 2 BHK Flats in Wakad</h3>
+                            </div>
+
+                            <div class="project-highlights">
+
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <div>
+                                        <span class="highlight-label">Location</span>
+                                        <p>Salisbury Park</p>
+                                    </div>
+                                </div>
+
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-ruler-combined"></i>
+                                    <div>
+                                        <span class="highlight-label">Area</span>
+                                        <p>3000 Sq.Ft.</p>
+                                    </div>
+                                </div>
+
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                                    <div>
+                                        <span class="highlight-label">Price</span>
+                                        <p>₹7.30 – ₹7.80 Cr</p>
+                                    </div>
+                                </div>
+
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-building"></i>
+                                    <div>
+                                        <span class="highlight-label">Property Status</span>
+                                        <p>Ready Possession</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 3 -->
+                    <div class="project-slide active">
+                        <img src="https://sobharealty.com/sites/default/files/styles/webp/public/2025-04/Homepage%20New%20Launch%20Banner%20Desk.jpg.webp?itok=GiA-wc_l"
+                            alt="Project One">
+
+                        <div class="project-info">
+                            <div class="project-left">
+                                <!-- <img src="../src/assets/logo.png" class="project-logo" alt=""> -->
+                                <h3>One Residency – 1 & 2 BHK in Ambegaon</h3>
+                            </div>
+
+                            <div class="project-highlights">
+
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <div>
+                                        <span class="highlight-label">Location</span>
+                                        <p>Salisbury Park</p>
+                                    </div>
+                                </div>
+
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-ruler-combined"></i>
+                                    <div>
+                                        <span class="highlight-label">Area</span>
+                                        <p>3000 Sq.Ft.</p>
+                                    </div>
+                                </div>
+
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                                    <div>
+                                        <span class="highlight-label">Price</span>
+                                        <p>₹7.30 – ₹7.80 Cr</p>
+                                    </div>
+                                </div>
+
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-building"></i>
+                                    <div>
+                                        <span class="highlight-label">Property Status</span>
+                                        <p>Ready Possession</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 4 -->
+                    <div class="project-slide active">
+                        <img src="https://sobharealty.com/sites/default/files/styles/webp/public/2025-11/New%20launch%20Banner%201440x619.jpg.webp?itok=tf3ihO6p"
+                            alt="Project One">
+
+                        <div class="project-info">
+                            <div class="project-left">
+                                <!-- <img src="../src/assets/logo.png" class="project-logo" alt=""> -->
+                                <h3>Jairaj Hills – NA Plots at Kondhwa Budruk</h3>
+                            </div>
+
+                            <div class="project-highlights">
+
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <div>
+                                        <span class="highlight-label">Location</span>
+                                        <p>Salisbury Park</p>
+                                    </div>
+                                </div>
+
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-ruler-combined"></i>
+                                    <div>
+                                        <span class="highlight-label">Area</span>
+                                        <p>3000 Sq.Ft.</p>
+                                    </div>
+                                </div>
+
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                                    <div>
+                                        <span class="highlight-label">Price</span>
+                                        <p>₹7.30 – ₹7.80 Cr</p>
+                                    </div>
+                                </div>
+
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-building"></i>
+                                    <div>
+                                        <span class="highlight-label">Property Status</span>
+                                        <p>Ready Possession</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NAV ARROWS -->
+                <button class="carousel-arrow prev">‹</button>
+                <button class="carousel-arrow next">›</button>
+            </div>
+
+            <!-- CTA -->
+            <div class="projects-cta">
+                <a href="projects.html" class="primary-btn">
+                    Explore All Projects
+                </a>
+            </div>
+        </section>
+
+        <!-- PRESS EVENTS (HOME) -->
+        <section class="home-press-events">
+            <div class="container">
+                <h2 class="section-title center">Trusted & Recognised</h2>
+
+                <div class="press-slider-wrapper">
+                    <button class="press-nav prev">&#10094;</button>
+
+                    <div class="press-slider">
+                        <!-- CARD 1 -->
+                        <div class="press-card active">
+                            <img src="https://www.cbnme.com/wp-content/uploads/2024/02/FSX-8843-2048x1366.jpg"
+                                alt="Press Event 1">
+                            <div class="press-caption">
+                                <span class="press-subtitle">Recognised by the Times Group.</span>
+                                <h3 class="press-title">Promising Mandate Firm of the Year – Pune Real Estate 2025</h3>
+                            </div>
+                        </div>
+
+                        <!-- CARD 2 -->
+                        <div class="press-card">
+                            <img src="https://www.cbnme.com/wp-content/uploads/2024/02/FSX-8807-2048x1365.jpg"
+                                alt="Press Event 2">
+                            <div class="press-caption">
+                                <span class="press-subtitle"> Honoured among India’s top businesses for performance and
+                                    innovation.</span>
+                                <h3 class="press-title"> Business Inspiracon Awards 2024</h3>
+                            </div>
+                        </div>
+
+                        <!-- CARD 3 -->
+                        <div class="press-card">
+                            <img src="https://www.cbnme.com/wp-content/uploads/2024/02/FSX-8798-2048x1365.jpg"
+                                alt="Press Event 3">
+                            <div class="press-caption">
+                                <span class="press-subtitle">Media</span>
+                                <h3 class="press-title">Leadership Excellence Honour</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="press-nav next">&#10095;</button>
+                </div>
+            </div>
+            <!-- CTA -->
+            <div class="projects-cta">
+                <a href="projects.html" class="primary-btn">
+                    View All Press & Events
+                </a>
+            </div>
+
+        </section>
+        <div class="hr-divider"></div>
+        <!-- TRUSTED DEVELOPERS -->
+        <section class="trusted-developers-home">
+            <div class="container">
+                <h2 class="section-title center">Trusted Developers</h2>
+
+                <div class="logo-slider">
+                    <div class="logo-track">
+                        <!-- Logos (duplicate set for infinite loop) -->
+                        <div class="logo-item"><img
+                                src="https://ravirajrealty.com/demo/wp-content/uploads/2023/01/raviraj-realty-we-build-benchmarks.png"
+                                alt="Developer 1"></div>
+                        <div class="logo-item"><img
+                                src="https://dugadgroup.in/wp-content/uploads/2023/04/cropped-cropped-cropped-dugad-logo-1.png"
+                                alt="Developer 2"></div>
+                        <div class="logo-item"><img
+                                src="https://jairajdevelopers.com/wp-content/uploads/2025/03/jairaj-png-logo-1.png"
+                                alt="Developer 3"></div>
+                        <div class="logo-item"><img
+                                src="https://www.kohinoorpune.com/resources/assets/frontcss/images/logo.svg"
+                                alt="Developer 4"></div>
+                        <div class="logo-item"><img
+                                src="https://sharadagroup.com/sharada/images/SHARADA%20LOGO%20MAIN.png"
+                                alt="Developer 5"></div>
+
+                        <!-- Duplicate -->
+                        <div class="logo-item"><img src="assets/logo1.png" alt="Developer 1"></div>
+                        <div class="logo-item"><img src="assets/logo2.png" alt="Developer 2"></div>
+                        <div class="logo-item"><img src="assets/logo3.png" alt="Developer 3"></div>
+                        <div class="logo-item"><img src="assets/logo4.png" alt="Developer 4"></div>
+                        <div class="logo-item"><img src="assets/logo5.png" alt="Developer 5"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA STRIP -->
+        <section class="cta-strip">
+            <div class="container cta-grid">
+
+                <!-- LEFT CONTENT -->
+                <div class="cta-content">
+                    <h2>Have a Project to Launch or Sell?</h2>
+
+                    <p>
+                        Whether you’re planning a new launch, relaunching a slow-moving project
+                        or exploring mandate options, we’d be happy to walk you through how
+                        24 Dimensions can help.
+                    </p>
+
+                    <!-- SOCIAL ICONS -->
+                    <div class="cta-socials">
+                        <a href="#" class="social facebook" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social linkedin" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+
+
+                    <!-- CONTACT INFO -->
+                    <div class="cta-contact">
+                        <div class="contact-item">
+                            <i class="fa-regular fa-envelope"></i>
+                            <a href="mailto:hello@24dimensions.com">
+                                hello@24dimensions.com
+                            </a>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:+917991242424">
+                                +91 79912 42424
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT FORM -->
+                <div class="cta-form-wrapper">
+                    <form class="global-form">
+                        <h3>Schedule a Consultation</h3>
+
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="tel" placeholder="Contact Number" required>
+                        </div>
+
+                        <button type="submit" class="cta-button full">
+                            Request Callback
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- FOOTER (Loaded via JS) -->
+    <div id="footer"></div>
+
+    <script src="../src/scripts/main.js"></script>
+</body>
+
+</html>
