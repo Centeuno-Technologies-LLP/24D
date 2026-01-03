@@ -1,44 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects | 24 Dimensions</title>
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="../src/styles/main.css" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>24D Projects</title>
+  <link rel="stylesheet" href="../src/styles/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header class="site-header">
+  <div id="header"></div>
+  <!-- Hero SECTION -->
+
+
+  <!--Project SECTION -->
+
+  <section class="projects-section">
     <div class="container">
-      <a href="index.html" class="logo">
-        <img src="../src/assets/logo.png" alt="24 Dimensions Logo">
-      </a>
 
-      <nav class="nav">
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="24DExclusive.html">24D Exclusive</a>
-        <a href="channel-partners.html">Channel Partners</a>
-        <a href="events.html">Events</a>
-        <a href="happy-customer.html">Happy Customers</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <!-- SECTION HEADER -->
+      <div class="projects-header">
+        <span class="overview-label"> Our Projects</span>
+        <h2>All our mandates and associations in one place</h2>
+        <p>
+          Every project listed here reflects a different micro-market, product mix and price band – but the common thread is the way 24 Dimensions has contributed through strategy, marketing and sales.
+        </p>
+      </div>
+
+      <!-- FILTER TABS -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="ongoing">Ongoing</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+        <button class="filter-btn" data-filter="sole">Sole-Selling</button>
+        <button class="filter-btn" data-filter="plotting">Plotting</button>
+      </div>
+
+      <!-- PROJECT GRID -->
+      <div class="projects-grid">
+
+        <!-- ================= ONGOING ================= -->
+        <div class="project-card ongoing">
+          <img
+            src="https://cdn.properties.emaar.com/wp-content/uploads/2025/11/BUSINESS_BAY_COMMUNITY-1620x832-1-706x385.jpg"
+            alt="">
+          <div class="project-content">
+            <h3>Synergy: Salisbury Park – 4.5 BHK Residences</h3>
+            <div class="meta">
+              <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Salisbury Park
+              </span>
+
+              <span>
+                <i class="fa-solid fa-ruler-combined"></i>
+                3000 Sq.Ft.
+              </span>
+
+              <span>
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+                ₹7.30 – ₹7.80 Cr
+              </span>
+            </div>
+
+            <p>
+              Large-format homes in a serene, old-money residential pocket – for families
+              that want space, privacy and excellent central connectivity.
+            </p>
+
+            <button class="primary-btn-2">Know More</button>
+          </div>
+        </div>
+
+        <div class="project-card ongoing">
+          <img
+            src="https://cdn.properties.emaar.com/wp-content/uploads/2025/11/BUSINESS_BAY_COMMUNITY-1620x832-1-706x385.jpg"
+            alt="">
+          <div class="project-content">
+            <h3>ONE RESIDENCY – 1 & 2 BHK Homes, Ambegaon</h3>
+
+
+            <div class="meta">
+              <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Ambegaon
+              </span>
+
+              <span>
+                <i class="fa-solid fa-building"></i>
+                1 & 2 BHK
+              </span>
+
+              <span>
+                <i class="fa-solid fa-ruler-combined"></i>
+                2,90,000 Sq.Ft.
+              </span>
+            </div>
+
+
+            <p>
+              Integrated project marketing and on-ground initiatives driving consistent
+              site visits from family homebuyers.
+            </p>
+             <button class="primary-btn-2">Know More</button>
+          </div>
+        </div>
+
+        <div class="project-card ongoing">
+          <img
+            src="https://cdn.properties.emaar.com/wp-content/uploads/2025/11/BUSINESS_BAY_COMMUNITY-1620x832-1-706x385.jpg"
+            alt="">
+          <div class="project-content">
+            <h3>JAIRAJ HILLS – NA Residential Plots</h3>
+
+
+            <div class="meta">
+              <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Kondhwa Budruk
+              </span>
+
+              <span>
+                <i class="fa-solid fa-building"></i>
+                28 Units
+              </span>
+
+              <span>
+                <i class="fa-solid fa-ruler-combined"></i>
+                1,68,000 Sq.Ft.
+              </span>
+            </div>
+
+            <p>
+              Positioned as an investment and second-home opportunity with focused outreach
+              to long-term land buyers.
+            </p>
+             <button class="primary-btn-2">Know More</button>
+          </div>
+          
+        </div>
+
+        <!-- ================= COMPLETED ================= -->
+        <div class="project-card completed">
+          <img
+            src="https://cdn.properties.emaar.com/wp-content/uploads/2025/11/BUSINESS_BAY_COMMUNITY-1620x832-1-706x385.jpg"
+            alt="">
+          <div class="project-content">
+            <h3>ALOHA – 2 BHK Homes</h3>
+
+            <div class="meta">
+              <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Wakad
+              </span>
+
+              <span>
+                <i class="fa-solid fa-building"></i>
+                2 BHK
+              </span>
+
+              <span>
+                <i class="fa-solid fa-ruler-combined"></i>
+                1,00,000 Sq.Ft.
+              </span>
+            </div>
+
+            <p>
+              Market-aligned positioning and execution to attract steady enquiries
+              from the IT-driven Wakad micro-market.
+            </p>
+             <button class="primary-btn-2">Know More</button>
+          </div>
+        </div>
+
+        <div class="project-card completed">
+          <img
+            src="https://cdn.properties.emaar.com/wp-content/uploads/2025/11/BUSINESS_BAY_COMMUNITY-1620x832-1-706x385.jpg"
+            alt="">
+          <div class="project-content">
+            <h3>PANACHE – 2 BHK Smart Homes</h3>
+            <div class="meta">
+              <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Kalyani Nagar
+              </span>
+
+              <span>
+                <i class="fa-solid fa-building"></i>
+                23 Flats
+              </span>
+
+              <span>
+                <i class="fa-solid fa-ruler-combined"></i>
+                30,000 Sq.Ft.
+              </span>
+            </div>
+
+            <p>
+              Launch communication and sales support for compact urban homes
+              targeting working professionals.
+            </p>
+             <button class="primary-btn-2">Know More</button>
+          </div>
+        </div>
+
+        <!-- ================= SOLE SELLING ================= -->
+        <div class="project-card sole">
+          <img
+            src="https://cdn.properties.emaar.com/wp-content/uploads/2025/11/BUSINESS_BAY_COMMUNITY-1620x832-1-706x385.jpg"
+            alt="">
+          <div class="project-content">
+            <h3>EROS MEADOWS – 2 & 3 BHK Homes</h3>
+            <div class="meta">
+              <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Wakad
+              </span>
+
+              <span>
+                <i class="fa-solid fa-building"></i>
+                32 Units
+              </span>
+
+              <span>
+                <i class="fa-solid fa-ruler-combined"></i>
+                40,000 Sq.Ft.
+              </span>
+            </div>
+
+            <p>
+              Sole-selling responsibility with structured sales operations
+              and targeted IT-professional campaigns.
+            </p>
+             <button class="primary-btn-2">Know More</button>
+          </div>
+        </div>
+
+        <!-- ================= PLOTTING ================= -->
+        <div class="project-card plotting">
+          <img
+            src="https://cdn.properties.emaar.com/wp-content/uploads/2025/11/BUSINESS_BAY_COMMUNITY-1620x832-1-706x385.jpg"
+            alt="">
+          <div class="project-content">
+            <h3>Kanhe Talegaon – NA Plots</h3>
+            <div class="meta">
+              <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Talegaon
+              </span>
+
+              <span>
+                <i class="fa-solid fa-building"></i>
+                126 Units
+              </span>
+
+              <span>
+                <i class="fa-solid fa-ruler-combined"></i>
+                7,00,000 Sq.Ft.
+              </span>
+            </div>
+
+            <p>
+              Positioned as a strategic land investment through investor-focused
+              communication and CP activations.
+            </p>
+             <button class="primary-btn-2">Know More</button>
+          </div>
+        </div>
+
+      </div>
     </div>
-  </header>
+  </section>
 
-  <!-- Page Content -->
-  <main class="page-content">
-    <h1>Projects</h1>
-    <p>This page is under construction.</p>
+
+        <!-- CTA STRIP -->
+        <section class="cta-strip">
+            <div class="container cta-grid">
+
+                <!-- LEFT CONTENT -->
+                <div class="cta-content">
+                    <h2>Have a Project to Launch or Sell?</h2>
+
+                    <p>
+                        Whether you’re planning a new launch, relaunching a slow-moving project
+                        or exploring mandate options, we’d be happy to walk you through how
+                        24 Dimensions can help.
+                    </p>
+
+                    <!-- SOCIAL ICONS -->
+                    <div class="cta-socials">
+                        <a href="#" class="social facebook" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social linkedin" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+
+
+                    <!-- CONTACT INFO -->
+                    <div class="cta-contact">
+                        <div class="contact-item">
+                            <i class="fa-regular fa-envelope"></i>
+                            <a href="mailto:hello@24dimensions.com">
+                                hello@24dimensions.com
+                            </a>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:+917991242424">
+                                +91 79912 42424
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT FORM -->
+                <div class="cta-form-wrapper">
+                    <form class="global-form">
+                        <h3>Schedule a Consultation</h3>
+
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="tel" placeholder="Contact Number" required>
+                        </div>
+
+                        <button type="submit" class="cta-button full">
+                            Request Callback
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </section>  
+
   </main>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <p>© 2025 24 Dimensions. All rights reserved.</p>
-  </footer>
+  <div id="footer"></div>
 
+  <script src="../src/scripts/main.js"></script>
 </body>
+
 </html>

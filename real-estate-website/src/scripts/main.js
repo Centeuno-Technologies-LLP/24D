@@ -15,6 +15,43 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+ /* KPI HIGHLIGHT cOUNTER */
+  const counters = document.querySelectorAll(".counter");
+
+  const animateCounter = (counter) => {
+    const target = +counter.getAttribute("data-target");
+    let count = 0;
+    const speed = 60;
+
+    const update = () => {
+      const increment = Math.ceil(target / speed);
+      count += increment;
+
+      if (count < target) {
+        counter.innerText = count;
+        requestAnimationFrame(update);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    update();
+  };
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  counters.forEach(counter => observer.observe(counter));
+
 
 /* Component Loader */
 function loadComponent(id, file) {
@@ -131,6 +168,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextBtn = document.querySelector(".carousel-arrow.next");
   const prevBtn = document.querySelector(".carousel-arrow.prev");
 
+  if (!track || !slides.length || !nextBtn || !prevBtn) return;
+
   let index = 0;
 
   function updateCarousel() {
@@ -168,15 +207,137 @@ function updateSlider() {
   slider.style.transform = `translateX(${offset}%)`;
 }
 
-nextBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % pressCards.length;
+if (pressCards.length && slider && prevBtn && nextBtn) {
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % pressCards.length;
+    updateSlider();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + pressCards.length) % pressCards.length;
+    updateSlider();
+  });
+
+  // Init
   updateSlider();
+}
+
+/* PROJECT FLTERING LOGIC */
+
+(function () {
+  const buttons = document.querySelectorAll(".filter-btn");
+  const cards = document.querySelectorAll(".project-card");
+
+  if (!buttons.length || !cards.length) return;
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      buttons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const filter = (btn.dataset.filter || "all").trim();
+
+      // Scroll the page to the filter controls so the user sees the results
+      const filtersEl = document.querySelector('.project-filters');
+      if (filtersEl) {
+        const header = document.querySelector('.header');
+        const offset = header ? header.offsetHeight : 0;
+        const top = filtersEl.getBoundingClientRect().top + window.scrollY - offset - 10;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+
+      cards.forEach(card => {
+        if (filter === "all" || card.classList.contains(filter)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+})();
+
+/* ===============================
+   24EXCLUSIVES SECTION STYLES
+================================ */
+
+const active24ExclusiveFilters = {
+  location: 'all',
+  budget: 'all',
+  status: 'all'
+};
+
+document.querySelectorAll('.filter24Exclusive').forEach(select => {
+  select.addEventListener('change', () => {
+    active24ExclusiveFilters[select.dataset.filter] = select.value;
+    apply24ExclusiveFilters();
+  });
 });
 
-prevBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + pressCards.length) % pressCards.length;
-  updateSlider();
+function apply24ExclusiveFilters() {
+  document.querySelectorAll('.project24ExclusiveItem').forEach(project => {
+    const matchLocation =
+      active24ExclusiveFilters.location === 'all' ||
+      project.dataset.location === active24ExclusiveFilters.location;
+
+    const matchBudget =
+      active24ExclusiveFilters.budget === 'all' ||
+      project.dataset.budget === active24ExclusiveFilters.budget;
+
+    const matchStatus =
+      active24ExclusiveFilters.status === 'all' ||
+      project.dataset.status === active24ExclusiveFilters.status;
+
+    project.style.display = (matchLocation && matchBudget && matchStatus)
+      ? 'grid'
+      : 'none';
+  });
+}
+
+document.querySelector('.filter24ExclusiveReset').addEventListener('click', () => {
+  document.querySelectorAll('.filter24Exclusive').forEach(select => {
+    select.value = 'all';
+    select.dispatchEvent(new Event('change'));
+  });
 });
 
-// Init
-updateSlider();
+/* ===============================how work*/
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const steps = document.querySelectorAll(".partnerHowStep");
+  const line = document.querySelector(".partnerHowLine");
+
+  // Enable animation mode
+  steps.forEach(step => step.classList.add("animate"));
+
+  function revealSteps() {
+    steps.forEach(step => {
+      const rect = step.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.85) {
+        step.classList.add("active");
+      }
+    });
+  }
+
+  revealSteps();
+  window.addEventListener("scroll", revealSteps);
+
+  // Mouse interaction
+  document.addEventListener("mousemove", (e) => {
+    const center = window.innerWidth / 2;
+    const offset = (e.clientX - center) * 0.01;
+    line.style.transform = `translateX(calc(-50% + ${offset}px))`;
+  });
+
+});
+
+
+
+
+
+
+
+
+
+
