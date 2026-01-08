@@ -1,44 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Customer | 24 Dimensions</title>
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="../src/styles/main.css" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Customers</title>
+  <link rel="stylesheet" href="../src/styles/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <img src="../src/assets/logo.png" alt="24 Dimensions Logo">
-      </a>
+  <div id="header"></div>
 
-      <nav class="nav">
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="24DExclusive.html">24D Exclusive</a>
-        <a href="channel-partners.html">Channel Partners</a>
-        <a href="events.html">Events</a>
-        <a href="happy-customer.html">Happy Customers</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <main>
+    <!-- Hero Section -->
+    <section class="happy-customer-hero">
+      <div class="happy-customer-container">
 
-  <!-- Page Content -->
-  <main class="page-content">
-    <h1>Happy Customer</h1>
-    <p>This page is under construction.</p>
+        <!-- Image Layout -->
+        <div class="happy-customer-image-row">
+
+          <!-- LEFT COLUMN -->
+          <div class="happy-customer-column">
+            <div class="happy-customer-stack">
+              <img src="https://i.pravatar.cc/200?img=1">
+              <img src="https://i.pravatar.cc/200?img=2">
+            </div>
+            <div class="happy-customer-stack">
+              <img src="https://i.pravatar.cc/200?img=3">
+              <img src="https://i.pravatar.cc/200?img=4">
+            </div>
+            <div class="happy-customer-stack single">
+              <img src="https://i.pravatar.cc/200?img=5">
+            </div>
+          </div>
+
+
+          <!-- CONTENT -->
+          <div class="happy-customer-content">
+            <span class="overview-label">Testimonials</span>
+
+            <h2>
+              Trusted by leaders<br>
+              from various industries
+            </h2>
+
+            <p>
+              This gallery brings together their stories, feedback and moments –<br> in their own words.
+            </p>
+
+            <a href="#" class="primary-btn">
+              Read Success Stories →
+            </a>
+          </div>
+          <!-- RIGHT COLUMN -->
+          <div class="happy-customer-column">
+            <div class="happy-customer-stack">
+              <img src="https://i.pravatar.cc/200?img=9">
+              <img src="https://i.pravatar.cc/200?img=10">
+            </div>
+            <div class="happy-customer-stack">
+              <img src="https://i.pravatar.cc/200?img=11">
+              <img src="https://i.pravatar.cc/200?img=12">
+            </div>
+            <div class="happy-customer-stack single">
+              <img src="https://i.pravatar.cc/200?img=13">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Video Section -->
+    <section class="Happy-customer-video-section">
+      <div class="Happy-customer-container">
+
+        <!-- Header -->
+        <div class="Happy-customer-video-header">
+          <div class="Happy-customer-video-header-left">
+            <h2 class="Happy-customer-video-title">Video Stories</h2>
+            <p class="Happy-customer-video-intro">
+              Watch some of our developers, buyers and partners share their experience with 24 Dimensions in their own
+              words.
+            </p>
+          </div>
+
+          <div class="Happy-customer-video-header-right">
+            <button class="Happy-customer-video-nav prev">&#10094;</button>
+            <button class="Happy-customer-video-nav next">&#10095;</button>
+          </div>
+        </div>
+
+        <!-- Carousel -->
+        <div class="Happy-customer-video-carousel-wrapper">
+          <div class="Happy-customer-video-carousel">
+
+            <!-- Card 1 -->
+            <div class="Happy-customer-video-card">
+              <video class="Happy-customer-video" src="videos/developer-story.mp4" muted loop playsinline></video>
+              <div class="Happy-customer-video-overlay">
+                Developer Story – One Residency, Ambegaon
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="Happy-customer-video-card">
+              <video class="Happy-customer-video" src="videos/buyer-journey.mp4" muted loop playsinline></video>
+              <div class="Happy-customer-video-overlay">
+                Buyer Journey – Booking a Home at Ambegaon during Navratri
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="Happy-customer-video-card">
+              <video class="Happy-customer-video" src="videos/channel-partner.mp4" muted loop playsinline></video>
+              <div class="Happy-customer-video-overlay">
+                Channel Partner Speak – Working with 24D Mandates
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="Happy-customer-video-card">
+              <video class="Happy-customer-video" src="videos/channel-partner.mp4" muted loop playsinline></video>
+              <div class="Happy-customer-video-overlay">
+                Channel Partner Speak – Working with 24D Mandates
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Filteration Section -->
+    <section class="Happy-customer-testimonials-section">
+      <div class="Happy-customer-container">
+
+        <h2 class="Happy-customer-section-heading">What Our Happy Customers Say</h2>
+
+        <!-- Filter Chips -->
+        <div class="Happy-customer-filter-chips">
+          <button class="Happy-customer-chip active" data-filter="all">All</button>
+          <button class="Happy-customer-chip" data-filter="developer">Developers & Landowners</button>
+          <button class="Happy-customer-chip" data-filter="buyer">Homebuyers & Investors</button>
+          <button class="Happy-customer-chip" data-filter="partner">Channel Partners</button>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="Happy-customer-testimonials-grid">
+
+          <!-- Developer / Landowner -->
+          <div class="Happy-customer-testimonial-card" data-category="developer">
+            <img src="https://i.pravatar.cc/200?img=12" alt="Developer" class="Happy-customer-avatar">
+            <span class="Happy-customer-tag">Developer • Mandate Partner</span>
+            <h3 class="Happy-customer-name">[Developer Name]</h3>
+            <p class="Happy-customer-role">Director, Raviraj Realty</p>
+            <p class="Happy-customer-project">Mandate for One Residency, Ambegaon</p>
+            <p class="Happy-customer-quote">
+              “24 Dimensions didn’t just run campaigns for us – they took ownership of the mandate. Their understanding
+              of Ambegaon’s micro-market translated into steady walk-ins and consistent bookings.”
+            </p>
+          </div>
+
+          <div class="Happy-customer-testimonial-card" data-category="developer">
+            <img src="https://i.pravatar.cc/200?img=12" alt="Developer" class="Happy-customer-avatar">
+            <span class="Happy-customer-tag">Developer • Premium Segment</span>
+            <h3 class="Happy-customer-name">[Developer Name]</h3>
+            <p class="Happy-customer-role">Partner, Dugad Group</p>
+            <p class="Happy-customer-project">Panache – 2 BHK Smart Homes, Kalyani Nagar</p>
+            <p class="Happy-customer-quote">
+              “From positioning to communication to site follow-ups, everything was structured. It felt like having an
+              in-house marketing and sales think-tank.”
+            </p>
+          </div>
+
+          <div class="Happy-customer-testimonial-card" data-category="developer">
+            <img src="https://i.pravatar.cc/200?img=12" alt="Landowner" class="Happy-customer-avatar">
+            <span class="Happy-customer-tag">Landowner / JV Partner</span>
+            <h3 class="Happy-customer-name">[Landowner Name]</h3>
+            <p class="Happy-customer-role">Landowner, Kondhwa Budruk</p>
+            <p class="Happy-customer-project">Jairaj Hills – NA Plots</p>
+            <p class="Happy-customer-quote">
+              “24 Dimensions helped us unlock the true value of our land and guided us till documentation and handover.”
+            </p>
+          </div>
+
+          <!-- Buyers / Investors -->
+          <div class="Happy-customer-testimonial-card" data-category="buyer">
+            <img src="https://i.pravatar.cc/200?img=12" alt="Buyer" class="Happy-customer-avatar">
+            <span class="Happy-customer-tag">2 BHK Homebuyer</span>
+            <h3 class="Happy-customer-name">[Buyer Name]</h3>
+            <p class="Happy-customer-role">One Residency, Ambegaon</p>
+            <p class="Happy-customer-quote">
+              “They explained everything clearly, helped us compare options and never pushed us. That gave us
+              confidence.”
+            </p>
+          </div>
+
+          <div class="Happy-customer-testimonial-card" data-category="buyer">
+            <img src="https://i.pravatar.cc/200?img=12" alt="Investor" class="Happy-customer-avatar">
+            <span class="Happy-customer-tag">Investor</span>
+            <h3 class="Happy-customer-name">[Investor Name]</h3>
+            <p class="Happy-customer-role">Plot Investor, Kanhe Talegaon</p>
+            <p class="Happy-customer-quote">
+              “They explained future developments and returns in simple terms. The entire process was smooth.”
+            </p>
+          </div>
+
+          <div class="Happy-customer-testimonial-card" data-category="buyer">
+            <img src="https://i.pravatar.cc/200?img=12" alt="Buyer" class="Happy-customer-avatar">
+            <span class="Happy-customer-tag">Upgrade Buyer</span>
+            <h3 class="Happy-customer-name">[Buyer Name]</h3>
+            <p class="Happy-customer-role">3 BHK Buyer, Undri</p>
+            <p class="Happy-customer-quote">
+              “Transparency around pricing, carpet area and timelines made the experience stress-free.”
+            </p>
+          </div>
+
+          <!-- Channel Partners -->
+          <div class="Happy-customer-testimonial-card" data-category="partner">
+            <img src="https://i.pravatar.cc/200?img=12" alt="Partner" class="Happy-customer-avatar">
+            <span class="Happy-customer-tag">Channel Partner</span>
+            <h3 class="Happy-customer-name">[Partner Name]</h3>
+            <p class="Happy-customer-role">Independent Consultant, Pune</p>
+            <p class="Happy-customer-quote">
+              “Projects are well thought through, campaigns are active and site teams are professional.”
+            </p>
+          </div>
+
+          <div class="Happy-customer-testimonial-card" data-category="partner">
+            <img src="https://i.pravatar.cc/200?img=12" alt="Partner" class="Happy-customer-avatar">
+            <span class="Happy-customer-tag">Long-Term Associate</span>
+            <h3 class="Happy-customer-name">[Partner Name]</h3>
+            <p class="Happy-customer-role">Director, Realty Firm</p>
+            <p class="Happy-customer-quote">
+              “Clear communication, transparent commercials and timely payouts have built long-term trust.”
+            </p>
+          </div>
+
+          <div class="Happy-customer-testimonial-card" data-category="partner">
+            <img src="https://i.pravatar.cc/200?img=12" alt="Partner" class="Happy-customer-avatar">
+            <span class="Happy-customer-tag">New Partner Experience</span>
+            <h3 class="Happy-customer-name">[Partner Name]</h3>
+            <p class="Happy-customer-role">New Channel Partner</p>
+            <p class="Happy-customer-quote">
+              “The team trained us properly and supported us during site visits. It feels like a partnership.”
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA STRIP -->
+    <section class="cta-strip">
+      <div class="container cta-grid">
+
+        <!-- LEFT CONTENT -->
+        <div class="cta-content">
+          <h2> Add Your Story to This Gallery?</h2>
+
+          <p>
+           If you’re a developer, buyer or channel partner who has worked with 24 Dimensions, we’d love to hear from you and feature your story here.<br>
+           Write to us at info@24dimensions.com with your feedback
+          </p>
+
+          <!-- SOCIAL ICONS -->
+          <div class="cta-socials">
+            <a href="#" class="social facebook" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social instagram" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social linkedin" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+
+
+          <!-- CONTACT INFO -->
+          <div class="cta-contact">
+            <div class="contact-item">
+              <i class="fa-regular fa-envelope"></i>
+              <a href="mailto:hello@24dimensions.com">
+                hello@24dimensions.com
+              </a>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+917991242424">
+                +91 79912 42424
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT FORM -->
+        <div class="cta-form-wrapper">
+          <form class="global-form">
+            <h3>  Share Your Feedback with Us</h3>
+
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required>
+            </div>
+
+            <div class="form-group">
+              <input type="email" placeholder="Email Address" required>
+            </div>
+
+            <div class="form-group">
+              <input type="tel" placeholder="Contact Number" required>
+            </div>
+
+            <button type="submit" class="cta-button full">
+              Request Callback
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+    <script src="happy-customer.js"></script>
   </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <p>© 2025 24 Dimensions. All rights reserved.</p>
-  </footer>
-
+  <div id="footer"></div>
+  <script src="../src/scripts/main.js"></script>
 </body>
+
 </html>

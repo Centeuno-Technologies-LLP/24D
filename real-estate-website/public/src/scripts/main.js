@@ -15,6 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+    // Happy customer testimonials filter (robust rewrite)
+    
+
  /* KPI HIGHLIGHT cOUNTER */
   const counters = document.querySelectorAll(".counter");
 
@@ -72,21 +75,33 @@ let currentSlide = 0;
 let slideInterval;
 
 function showSlide(index) {
+  if (!slides.length || !dots.length) return;
+
+  index = Number(index) || 0;
+  // clamp index
+  index = Math.max(0, Math.min(index, slides.length - 1));
+
   slides.forEach(slide => slide.classList.remove("active"));
   dots.forEach(dot => dot.classList.remove("active"));
 
-  slides[index].classList.add("active");
-  dots[index].classList.add("active");
+  if (slides[index]) slides[index].classList.add("active");
+  if (dots[index]) dots[index].classList.add("active");
 
   currentSlide = index;
 }
 
 function nextSlide() {
+  if (!slides.length) return;
   let next = (currentSlide + 1) % slides.length;
   showSlide(next);
 }
 
-slideInterval = setInterval(nextSlide, 6000);
+// Start auto-rotate only if there are slides and dots
+if (slides.length && dots.length) {
+  // show first slide
+  showSlide(0);
+  slideInterval = setInterval(nextSlide, 6000);
+}
 
 // Scroll reveal animation
 const fadeElements = document.querySelectorAll(".fade-up");
@@ -107,13 +122,17 @@ window.addEventListener("load", revealOnScroll);
 
 
 /* DOT CLICK */
-dots.forEach(dot => {
-  dot.addEventListener("click", () => {
-    clearInterval(slideInterval);
-    showSlide(parseInt(dot.dataset.slide));
-    slideInterval = setInterval(nextSlide, 6000);
+if (dots && dots.length) {
+  dots.forEach(dot => {
+    dot.addEventListener("click", () => {
+      if (slideInterval) clearInterval(slideInterval);
+      const idx = parseInt(dot.dataset.slide);
+      if (!Number.isFinite(idx)) return;
+      showSlide(idx);
+      slideInterval = setInterval(nextSlide, 6000);
+    });
   });
-});
+}
 
 /* ============================
    WHAT WE DO SLIDER
@@ -247,7 +266,13 @@ if (pressCards.length && slider && prevBtn && nextBtn) {
       }
 
       cards.forEach(card => {
-        if (filter === "all" || card.classList.contains(filter)) {
+          const combined = [card.dataset.filter, card.dataset.category, card.dataset.type, card.getAttribute('data-tags')]
+            .filter(Boolean)
+            .join(' ');
+
+          const cardFilters = combined.split(/\s+/).filter(Boolean);
+          const matches = filter === 'all' || card.classList.contains(filter) || cardFilters.includes(filter);
+          if (matches) {
           card.style.display = "block";
         } else {
           card.style.display = "none";
@@ -332,58 +357,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-// Events Page - Load More Functionality
-// Run only after DOM is ready and only when the page contains event elements
-document.addEventListener('DOMContentLoaded', () => {
-  const filterBtns = document.querySelectorAll('.event-filter');
-  const eventCards = document.querySelectorAll('.event-card');
-
-  if (filterBtns.length && eventCards.length) {
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        const filter = (btn.dataset.filter || 'all').trim();
-        eventCards.forEach(card => {
-          const cat = (card.dataset.category || '').trim();
-          card.style.display = (filter === 'all' || cat === filter) ? 'grid' : 'none';
-        });
-      });
-    });
-  }
-
-  // Event content mapping and popup handlers (only if the controls exist)
-  const eventData = {
-    baner: `<h2>Baner Showfest Season 1</h2><p>Held on 9th Oct 2021 from 9 AM \u2013 9 PM. Premium Baner\u2013Balewadi projects showcased.</p>`,
-    navratri: `<h2>Navratri Special Dhamaka \u2013 Ambegaon</h2><p>Festive offers, gifts, RJ engagement and grand finale on Dussehra.</p>`,
-    times: `<h2>Promising Mandate Firm of the Year 2025</h2><p>Awarded by Times Group for excellence in mandate-driven sales.</p>`,
-    blood: `<h2>Blood Testing Workshop</h2><p>Health initiative for students at Shri Somnath Education Society.</p>`,
-    meetup: `<h2>Annual Employee Meetup 2022</h2><p>Celebration of milestones, growth and team bonding.</p>`
-  };
-
-  const viewBtns = document.querySelectorAll('.view-event-btn');
-  if (viewBtns.length) {
-    viewBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const popup = document.getElementById('eventPopup');
-        const popupContent = document.getElementById('popupContent');
-        if (!popup || !popupContent) return;
-        popupContent.innerHTML = eventData[btn.dataset.event] || '';
-        popup.style.display = 'block';
-        document.body.style.overflow = 'hidden';
-      });
-    });
-
-    const closeEl = document.querySelector('.close-popup');
-    if (closeEl) {
-      closeEl.addEventListener('click', () => {
-        const popup = document.getElementById('eventPopup');
-        if (popup) popup.style.display = 'none';
-        const popupContent = document.getElementById('popupContent');
-        if (popupContent) popupContent.innerHTML = '';
-        document.body.style.overflow = '';
-      });
-    }
-  }
-});

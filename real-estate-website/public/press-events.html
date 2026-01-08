@@ -1,44 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Press | 24 Dimensions</title>
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="../src/styles/main.css" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events</title>
+  <link rel="stylesheet" href="../src/styles/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <img src="../src/assets/logo.png" alt="24 Dimensions Logo">
-      </a>
+  <div id="header"></div>
+  <!-- Hero Sections -->
+  <!-- EVENT HERO SECTION -->
+  <section class="event-hero-section">
+    <div class="event-hero-container">
 
-      <nav class="nav">
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="24DExclusive.html">24D Exclusive</a>
-        <a href="channel-partners.html">Channel Partners</a>
-        <a href="events.html">Events</a>
-        <a href="happy-customer.html">Happy Customers</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <span class="overview-label">
+        Events & Initiatives
+      </span>
+
+      <h2>
+        Where Real Estate, People and Community Come Together
+      </h2>
+
+      <p>
+        Beyond mandates and sales numbers, 24 Dimensions is actively involved in property showcases,
+        buyer engagement events, industry forums, festive campaigns, community initiatives and
+        internal team milestones.
+      </p>
+
+      <p class="event-hero-note">
+        This page captures some of the key moments that reflect how we work,
+        what we believe in and who we work with.
+      </p>
+
     </div>
-  </header>
+  </section>
 
-  <!-- Page Content -->
-  <main class="page-content">
-    <h1>Events</h1>
-    <p>Hero me Show categories in chips along with title description below that show press events after click it expand and show full along with bullet points.</p>
+
+
+  <section class="event-listing-section">
+
+    <h2 class="event-section-title">Events & Initiatives</h2>
+
+    <!-- FILTERS -->
+    <div class="event-filters">
+      <button class="event-filter active" data-filter="all">All Events</button>
+      <button class="event-filter" data-filter="property">Property Showcases</button>
+      <button class="event-filter" data-filter="awards">Awards</button>
+      <button class="event-filter" data-filter="community">Community & CSR</button>
+      <button class="event-filter" data-filter="internal">Internal Culture</button>
+    </div>
+
+    <!-- EVENTS -->
+    <div class="event-cards">
+
+      <!-- EVENT 1 -->
+      <div class="event-card" data-category="property">
+        <div class="event-card-image">
+          <img src="https://picsum.photos/400/300?random=1">
+        </div>
+        <div class="event-card-content">
+          <span class="event-tag">Property Showcase</span>
+          <h3>Baner Showfest Season 1 – A Grand Realty Showcase</h3>
+          <p class="events-p">The Baner Showfest, an initiative by 24 Dimensions, was one of Pune’s largest
+            residential property expos
+            – curated to help homebuyers discover some of the most sought-after developments in the Baner–Balewadi
+            belt.</p>
+          <p class="events-p"><strong>Key Highlights:</strong>
+            Held on 9th October 2021, from 9:00 a.m. to 9:00 p.m...
+          </p>
+        </div>
+        <div class="event-card-action">
+          <a href="event-detail.html?event=baner-showfest" class="primary-btn-2">
+            View Event
+          </a>
+        </div>
+      </div>
+
+      <!-- EVENT 2 -->
+      <div class="event-card" data-category="property">
+        <div class="event-card-image">
+          <img src="https://picsum.photos/400/300?random=2">
+        </div>
+        <div class="event-card-content">
+          <span class="event-tag">Property Event</span>
+          <h3>Navratri Special Dhamaka – Ambegaon</h3>
+          <p class="events-p">A festive property event blending Navratri with home buying.</p>
+        </div>
+        <div class="event-card-action">
+          <button class="view-event-btn" data-event="navratri">View Event</button>
+        </div>
+      </div>
+
+      <!-- EVENT 3 -->
+      <div class="event-card" data-category="awards">
+        <div class="event-card-image">
+          <img src="https://picsum.photos/400/300?random=3">
+        </div>
+        <div class="event-card-content">
+          <span class="event-tag">Awards</span>
+          <h3>Promising Mandate Firm of the Year 2025</h3>
+          <p class="events-p">Recognised by Times Group for mandate excellence.</p>
+        </div>
+        <div class="event-card-action">
+          <button class="view-event-btn" data-event="times">View Event</button>
+        </div>
+      </div>
+
+      <!-- EVENT 4 -->
+      <div class="event-card" data-category="community">
+        <div class="event-card-image">
+          <img src="https://picsum.photos/400/300?random=4">
+        </div>
+        <div class="event-card-content">
+          <span class="event-tag">Community</span>
+          <h3>Blood Testing Workshop – Shri Somnath Education Society</h3>
+          <p class="events-p">A health initiative supporting students’ wellbeing.</p>
+        </div>
+        <div class="event-card-action">
+          <button class="view-event-btn" data-event="blood">View Event</button>
+        </div>
+      </div>
+
+      <!-- EVENT 5 -->
+      <div class="event-card" data-category="internal">
+        <div class="event-card-image">
+          <img src="https://picsum.photos/400/300?random=5">
+        </div>
+        <div class="event-card-content">
+          <span class="event-tag">Internal Culture</span>
+          <h3>Annual Employee Meetup 2022</h3>
+          <p class="events-p">Celebrating milestones, people and shared vision.</p>
+        </div>
+        <div class="event-card-action">
+          <button class="view-event-btn" data-event="meetup">View Event</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section class="cta-strip">
+    <div class="container cta-grid">
+
+      <!-- LEFT CONTENT -->
+      <div class="cta-content">
+        <h2>Want to Partner with Us for Your Next Event or Showcase?</h2>
+
+        <p>
+          Whether you’re planning a property showcase, project-specific event, festive campaign or investor meet, 24
+          Dimensions can help conceptualise, curate and execute it as part of a larger mandate strategy.
+
+        </p>
+
+        <!-- SOCIAL ICONS -->
+        <div class="cta-socials">
+          <a href="#" class="social facebook" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social instagram" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="social linkedin" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+
+
+        <!-- CONTACT INFO -->
+        <div class="cta-contact">
+          <div class="contact-item">
+            <i class="fa-regular fa-envelope"></i>
+            <a href="mailto:hello@24dimensions.com">
+              hello@24dimensions.com
+            </a>
+          </div>
+
+          <div class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+917991242424">
+              +91 79912 42424
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT FORM -->
+      <div class="cta-form-wrapper">
+        <form class="global-form">
+          <h3> Discuss an Event or Showcase with Us</h3>
+
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required>
+          </div>
+
+          <div class="form-group">
+            <input type="email" placeholder="Email Address" required>
+          </div>
+
+          <div class="form-group">
+            <input type="tel" placeholder="Contact Number" required>
+          </div>
+
+          <button type="submit" class="cta-button full">
+            Request Callback
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="events.js"></script>
   </main>
+  <div id="footer"></div>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <p>© 2025 24 Dimensions. All rights reserved.</p>
-  </footer>
-
+  <script src="../src/scripts/main.js"></script>
 </body>
 </html>
